@@ -1,0 +1,547 @@
+/* MemoryVault CSS - v1.0 */
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    /* Dark brown leather gradient */
+    color: #5d4037;
+    /* Dark brown text for better contrast */
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Serif font for classic diary feel */
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    /* Deeper shadow for leather look */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff8dc;
+    /* Cornsilk - warm paper color */
+    border: 1px solid #d2b48c;
+    /* Tan border */
+    position: relative;
+}
+
+/* Header Styles */
+.app-header {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+}
+
+.logo-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.header-controls {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4a00e0;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3800a8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    background-color: #f5f0e6;
+    /* Light parchment color */
+    padding: 25px 20px;
+    border-right: 1px solid #d2b48c;
+    /* Tan border */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #eef5ff;
+    border-color: #4a00e0;
+    color: #4a00e0;
+}
+
+/* Diary List */
+.diary-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.diary-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.diary-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.diary-item.active {
+    border-color: #4a00e0;
+    background-color: #f0f7ff;
+}
+
+.diary-date {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.diary-preview {
+    font-size: 0.95rem;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Diary Item Header */
+.diary-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.delete-entry-btn {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.diary-item:hover .delete-entry-btn {
+    opacity: 1;
+}
+
+.delete-entry-btn:hover {
+    color: #ff4757;
+    background-color: rgba(255, 71, 87, 0.1);
+}
+
+/* Editor Area */
+.editor-container {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.editor-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    border: none;
+    width: 70%;
+    padding: 5px 0;
+    background: transparent;
+}
+
+.editor-title:focus {
+    outline: none;
+    border-bottom: 2px solid #4a00e0;
+}
+
+.editor-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.editor-area {
+    flex: 1;
+    border: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 15px;
+    resize: none;
+    background-color: #fffef9;
+    /* Slightly off-white */
+    border-radius: 8px;
+    border: 1px solid #d2b48c;
+    /* Tan border */
+    color: #5d4037;
+    /* Brown text */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Serif font for writing */
+}
+
+.editor-area:focus {
+    outline: none;
+    border-color: #c3cfe2;
+    box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.1);
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.mood-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mood-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.2rem;
+}
+
+.mood-btn:hover, .mood-btn.active {
+    transform: scale(1.1);
+    border-color: #4a00e0;
+}
+
+/* Stats Section */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a00e0;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer */
+.app-footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .diary-list {
+        max-height: 200px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .editor-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .editor-title {
+        width: 100%;
+    }
+    
+    .header-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== VINTAGE LEATHER DIARY ENHANCEMENTS ===== */
+
+/* Add subtle leather texture to body */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235a3921' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Add ruled paper lines to editor */
+.editor-area {
+    background-image: linear-gradient(transparent, transparent 1.5em, #f0e6d6 1.5em);
+    background-size: 100% 1.6em;
+    line-height: 1.6em;
+}
+
+/* Update text colors for vintage theme */
+.diary-date {
+    color: #8d6e63;
+    /* Medium brown */
+}
+
+.diary-preview {
+    color: #4e342e;
+    /* Dark brown */
+}
+
+.sidebar-title {
+    color: #6d4c41;
+    /* Brown */
+}
+
+.editor-title {
+    color: #3e2723;
+    /* Very dark brown */
+}
+
+.filter-btn {
+    border: 1px solid #d2b48c;
+    /* Tan border */
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #f5e6d3;
+    /* Light tan */
+    border-color: #8b4513;
+    /* Leather brown */
+    color: #8b4513;
+}
+
+.diary-item {
+    border: 1px solid #e8d9c5;
+    /* Light tan border */
+    background-color: #fffef7;
+}
+
+.diary-item:hover {
+    background-color: #fcf8f0;
+}
+
+.diary-item.active {
+    border-color: #8b4513;
+    background-color: #f5e6d3;
+}
+
+/* Add page curl effect to app container */
+.app-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(225deg, transparent 50%, rgba(139, 69, 19, 0.1) 50%);
+    border-radius: 0 15px 0 0;
+}
+
+/* Update button colors for vintage theme */
+.btn-primary {
+    background-color: #8b4513;
+    /* Leather brown */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6b3410;
+    /* Darker leather brown */
+}
+
+.btn-secondary {
+    background-color: #f5f0e6;
+    color: #5d4037;
+    border: 1px solid #d2b48c;
+}
+
+.btn-secondary:hover {
+    background-color: #e8dfd6;
+}
+
+/* Update mood buttons */
+.mood-btn {
+    border: 2px solid #d2b48c;
+}
+
+.mood-btn:hover, .mood-btn.active {
+    border-color: #8b4513;
+}
+
+/* Update stat cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background-color: #fcf8f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.08);
+    text-align: center;
+    border: 1px solid #e8d9c5;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-value {
+    color: #8b4513;
+    /* Leather brown */
+}
+
+/* Update header gradient */
+.app-header {
+    background: linear-gradient(to right, #5a3921 0%, #8b4513 100%);
+    /* Dark leather gradient */
+}
