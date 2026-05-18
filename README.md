@@ -1,8 +1,14 @@
-# 📔 MemoryVault - Your Personal Digital Diary
+<h1 align="center"># 📔 MemoryVault - Your Personal Digital Diary</h1>
 
-## 📺 Link: https://emman-21.github.io/MemoryVault/
+<p align="center">
+  <code> JavaScript</code> &nbsp;|&nbsp; 
+  <code> HTML</code> &nbsp;|&nbsp; 
+  <code> CSS</code>
+</p>
 
-# ✨ Features
+## 📺 Tap the link to view results: https://emman-21.github.io/MemoryVault/
+
+# `✨ Features`
 
 ### 📝 **Core Features**
 - ✏️ **Write & Edit** - Create beautiful diary entries
@@ -22,7 +28,7 @@
 - 🔍 **Quick Access** - Recent entries sidebar
 - 📤 **Export Data** - Backup as JSON file
 
-# 🚀 **Quick Start**
+# `🚀 Quick Start`
 
 1. 📥 **Download** all three files:
    - `index.html`
@@ -35,7 +41,7 @@
 
 4. ✍️ **Start writing!**
 
-# 🎯 **How to Use**
+# `🎯 How to Use`
 
 ### ✨ **Creating Entries**
 - ➕ Click **"New Entry"** button
@@ -54,7 +60,7 @@
 - `Delete key` - Delete selected entry
 - ⏱️ Auto-saves every 30 seconds
 
-# 🔧 **File Structure**
+# `🔧 File Structure`
 
 ```
 📁 MemoryVault/
